@@ -20,7 +20,7 @@ from tqdm import tqdm
 from utils import relative_pos_cyl, random_3d_vector
 
 # GENERATION PARAMS
-SIZE_SAMPLE = 100000
+SIZE_SAMPLE = 10000
 N_POINTS_VOLUME = 5000
 GEN_COEFF = 0.65  # this value is used to define the size of the generating space. chose a value to have ~50% of y=0
 use_multiprocessing = True  # may not work with iPython

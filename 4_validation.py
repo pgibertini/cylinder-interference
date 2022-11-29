@@ -16,7 +16,7 @@ def main():
     # LOADING DATA
     data = []
 
-    with open("data/data_100000_5000.csv", newline="") as csvfile:
+    with open("data/data_10000_5000.csv", newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=",", quotechar="|")
         for row in reader:
             data.append((list(map(float, row))))

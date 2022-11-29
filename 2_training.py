@@ -17,12 +17,11 @@ def main():
     # LOADING DATA
     data = []
 
-    with open("data/data_100000_5000.csv", newline="") as csvfile:
+    with open("data/data_10000_5000.csv", newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=",", quotechar="|")
         for row in reader:
             data.append((list(map(float, row))))
 
-    # data = [row for row in data if row[-1] != 0]
     print(len(data))
 
     # SEPARATING X AND Y
@@ -35,7 +34,7 @@ def main():
     # scaled_data = inputs
 
     X_train, X_test, Y_train, Y_test = train_test_split(
-        scaled_data, outputs, train_size=int(len(outputs) * 0.5), shuffle=True
+        scaled_data, outputs, train_size=int(len(outputs) * 0.8), shuffle=True
     )
 
     # MLP TRAIN
