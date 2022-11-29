@@ -50,7 +50,15 @@ def relative_pos_cyl(cylinder_0: Cylinder, cylinder_1: Cylinder) -> List[float]:
     ]
 
 
-def movement_to_point_and_axis(obj, point: volmdlr.Point3D, axis: volmdlr.Vector3D):
+def movement_to_point_and_axis(
+    obj, point: volmdlr.Point3D, axis: volmdlr.Vector3D
+) -> (volmdlr.Vector3D, volmdlr.Vector3D, float):
+    """
+    :param obj: a 3d object such as a cylinder
+    :param point: a volmdlr.Point3D
+    :param axis: a volmdlr.Vector3D
+    :return: (volmdlr.Vector3D, volmdlr.Vector3D, float)
+    """
     translation_vector = point - obj.position
     rotation_angle = None
     rotation_axis = None

@@ -29,7 +29,7 @@ def main():
     outputs = [row[-1] for row in data]
 
     # SCALING DATA
-    scaled_data, scaler_input = scale_data(data_matrix=inputs)
+    scaled_data, _ = scale_data(data_matrix=inputs)
 
     # MLP TRAIN
     regressor = MLPRegressor(

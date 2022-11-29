@@ -8,10 +8,10 @@ Machine learning model for interference detection between 3D objects
 import math
 import multiprocessing
 import time
+import csv
 import numpy
 import volmdlr
 import volmdlr.core
-import csv
 import matplotlib.pyplot as plt
 from typing import List
 from volmdlr.primitives3d import Cylinder
@@ -23,7 +23,7 @@ from utils import relative_pos_cyl, random_3d_vector
 SIZE_SAMPLE = 10000
 N_POINTS_VOLUME = 5000
 GEN_COEFF = 0.65  # this value is used to define the size of the generating space. chose a value to have ~50% of y=0
-use_multiprocessing = True  # may not work with iPython
+USE_MULTIPROCESSING = True  # may not work with iPython
 
 # BASE OBJECT
 RADIUS = 0.05
@@ -101,7 +101,7 @@ def main():
     )
 
     # GENERATING DATA
-    if use_multiprocessing:
+    if USE_MULTIPROCESSING:
         pool = multiprocessing.Pool(multiprocessing.cpu_count())
         data = list(
             tqdm(pool.imap_unordered(generate_data_uniform, sample), total=SIZE_SAMPLE)
