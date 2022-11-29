@@ -185,7 +185,7 @@ This script also tests performance :
 
 ```
 PERFORMANCE TEST
-Classic, time per calculus: 192.70695768999983 ms
+Approximation, time per calculus: 192.70695768999983 ms
 MLP, time per calculus: 0.05575683999950343 ms
 RF, time per calculus: 4.812478700000611 ms
 ```
