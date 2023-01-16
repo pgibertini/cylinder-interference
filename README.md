@@ -23,7 +23,7 @@ I have implemented an approach to create, train and test a model capable of pred
 
 ***
 
-## Methodology
+## Methodology & Results
 
 ### 0. Approximation method
 
