@@ -3,7 +3,27 @@
 Experimentation on cylinder inference using approximated methods and regression models.
 
 *This project has been realized in the context of my apprenticeship at Dessia Technologies*
+
 ***
+
+## Base problem
+
+Interference calculations between 3D objects in volmdlr can be very time consuming, especially for complex geometries.
+
+## Goal
+
+The objective was to train a prediction model capable of predicting the interference volume between two given 3D objects.
+
+## Experience done
+
+I have implemented an approach to create, train and test a model capable of predicting the interference volume for two types of geometries:
+
+- simple geometry: a cylinder
+- complex geometry (not presented here)
+
+***
+
+## Methodology
 
 ### 0. Approximation method
 
@@ -200,3 +220,16 @@ neural network cross validation r²: [0.9917538  0.98716433 0.99011082 0.9882801
 random forest cross validation r²: [0.98398031 0.98328499 0.98328183 0.98390223 0.98440689 0.98332359
  0.98353045 0.98369089 0.98282001 0.98391388]
 ```
+
+***
+
+## Key results
+
+- For cylinders, it works quite well, I had very good predictions, and the learning was done in a reasonable time.
+- For more complex geometries, the predictions were correct but the problem was the generation of the data for the training which took a lot of time with the interference volume calculation method I implemented
+
+## Lesson learned
+
+- The approach can be interesting for simple geometries because the predictions are good and the learning is relatively fast. but ensuring the robustness of the model is not so simple, and maybe it could be more interesting to improve the existing methods / implement analytical methods rather than going for the big money with supervised learning. but prediction remains an interesting option.
+- For complex geometries, the big problem is learning, so I think it would be better to improve the performance of existing methods rather than trying to get around the problem with prediction
+- Prediction is still very interesting to improve the performance of some complex operations, but interference is maybe not the best case of application
